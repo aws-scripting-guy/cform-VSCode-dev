@@ -10,7 +10,7 @@
     "icon": "images/ManagementTools_CloudFormation.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/aws-scripting-guy/cform-VSCode.git"
+        "url": "https://github.com/aws-scripting-guy/cform-VSCode-dev.git"
     },
     "engines": {
         "vscode": "^0.10.1"
