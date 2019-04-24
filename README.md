@@ -62,6 +62,10 @@ After installation, open your User Settings ```(Ctrl + ,)``` and paste preferenc
     // Enable/disable default YAML formatter (requires restart)
     "yaml.format.enable": true,
 ```
+Nighly builds
+-------------------
+Download latest nightly build from [https://github.com/aws-scripting-guy/cform-VSCode-dev/releases/tag/Nightly](https://github.com/aws-scripting-guy/cform-VSCode-dev/releases/tag/Nightly)
+
 
 Troubleshooting
 -------------------
