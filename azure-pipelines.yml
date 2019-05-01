@@ -66,6 +66,8 @@ steps:
 
 - powershell: |
     .\scripts\git-package.ps1
+  env:
+      BUILD_REASON: $(Build.Reason)
   displayName: "push updated package.json to remote git"
 
 - task: CopyFiles@2
