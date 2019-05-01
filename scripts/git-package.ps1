@@ -8,5 +8,5 @@ if ($BUILD_REASON -eq "Schedule") {
 }
 else {
   # do nothing    
-  write-host "[info] this is not scheduled build. Build type is "$(Build.Reason)""
+  write-host "[info] this is not scheduled build. Build type is "$BUILD_REASON" "
 }
