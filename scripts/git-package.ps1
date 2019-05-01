@@ -1,5 +1,7 @@
 # Write package.json back to github only for release builds 
 
+write-host "[info] Build reason is: $env:BUILD_REASON "
+
 if ($env:BUILD_REASON -eq "Schedule" -or "Manual") {
   # write package.json back to repo 
   git show
