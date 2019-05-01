@@ -1,6 +1,6 @@
 # Write package.json back to github only for release builds 
 
-if ($BUILD_REASON -eq "Schedule") {
+if ($env:BUILD_REASON -eq "Schedule") {
   # write package.json back to repo 
   git show
   git log --oneline
@@ -8,5 +8,5 @@ if ($BUILD_REASON -eq "Schedule") {
 }
 else {
   # do nothing    
-  write-host "[info] this is not scheduled build. Build type is "$BUILD_REASON" "
+  write-host "[info] this is not scheduled build. Build reason is $env:BUILD_REASON "
 }
