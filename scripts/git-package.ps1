@@ -10,5 +10,5 @@ if ($env:BUILD_REASON -eq "Schedule" -or "Manual") {
 }
 else {
   # do nothing    
-  write-host "[info] this is not scheduled build. Build reason is $env:BUILD_REASON "
+  write-host "[info] this is not a scheduled build. Build reason is $env:BUILD_REASON "
 }
