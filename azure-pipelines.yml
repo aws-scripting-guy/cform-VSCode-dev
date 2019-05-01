@@ -47,7 +47,11 @@ steps:
     git config --global user.name "AWS Scripting Guy from Azure DevOps"
   displayName: "set up git properties"
 
-
+- powershell: |
+    git status
+    git show
+    git checkout master
+  displayName: "git checkout master"
 
 - powershell: |
    Write-Host "npm version $(UPDATE_TYPE)"
@@ -60,16 +64,16 @@ steps:
    vsce package   
   displayName: 'package into .vsix'
 
+# show git status for vsix
 - powershell: |
     git status
     git show
-    git checkout master
-  displayName: "git checkout master"
+  displayName: 'git show'
 
 - powershell: |
     .\scripts\git-package.ps1
   env:
-      BUILD_REASON: $(Build.Reason)
+      BUILD_REASON: $(System.AccessToken)
   displayName: "push updated package.json to remote git"
 
 - task: CopyFiles@2
