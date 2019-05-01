@@ -64,13 +64,9 @@ steps:
    vsce package   
   displayName: 'package into .vsix'
 
-# Omit writing package.json back to github
-#- powershell: |
-#    git status
-#    git show
-#    git log --oneline
-#    git push 
-#  displayName: "push updated package.json to remote git"
+- powershell: |
+    .\scripts\git-package.ps1
+  displayName: "push updated package.json to remote git"
 
 - task: CopyFiles@2
   displayName: 'Copy Files to Artifact Directory)'
