@@ -64,12 +64,6 @@ steps:
    vsce package   
   displayName: 'package into .vsix'
 
-# show git status for vsix
-- powershell: |
-    git status
-    git show
-  displayName: 'git show'
-
 - powershell: |
     .\scripts\git-package.ps1
   env:
